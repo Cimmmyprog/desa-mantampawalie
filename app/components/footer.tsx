@@ -164,7 +164,7 @@ export default function Footer() {
               <div className="flex items-start gap-3 text-gray-400">
                 <MapPinIcon className="mt-1 h-5 w-5 shrink-0 text-green-400" />
                 <p>
-                  Desa Mantanpawalie, Kecamatan Mattampa, Kabupaten Bone
+                  Desa Mantanpawalie, Kecamatan Lamuru, Kabupaten Bone
                 </p>
               </div>
 
