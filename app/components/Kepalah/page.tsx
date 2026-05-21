@@ -152,7 +152,7 @@ export default function Kepalah() {
                     </p>
 
                     <h4 className="font-semibold text-slate-900">
-                      kepaladesa@desamakmur.id
+                      mattampawalied@gmail.com
                     </h4>
                   </div>
                 </div>

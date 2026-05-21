@@ -83,7 +83,7 @@ export default function Header() {
             {/* Text */}
             <div>
               <h1 className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-xl font-black tracking-wide text-transparent">
-                Desa Mantampawalie
+               Desa Mattampa walie
               </h1>
 
               <p className="text-xs tracking-widest text-green-300/80">

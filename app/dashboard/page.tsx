@@ -76,7 +76,7 @@ export default function DashboardPage() {
         <div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-6 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-emerald-600">
-              Desa Makmur Admin Panel
+              Desa Mattampa walie Admin Panel
             </p>
             <h1 className="mt-2 text-3xl font-bold text-slate-900 md:text-4xl">
               Dashboard Admin
