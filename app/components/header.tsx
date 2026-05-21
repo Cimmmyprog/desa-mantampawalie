@@ -87,7 +87,7 @@ export default function Header() {
               </h1>
 
               <p className="text-xs tracking-widest text-green-300/80">
-                Kecematan Lamuru
+                Kecamatan Lamuru
               </p>
             </div>
           </Link>

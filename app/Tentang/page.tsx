@@ -14,7 +14,7 @@ export default function AboutVillage() {
             </span>
 
             <h2 className="mt-6 text-4xl font-black leading-tight text-slate-900 md:text-5xl">
-              Desa Mantanpawalie Menuju Desa Digital yang Modern
+              Desa Mattanpa Walie Menuju Desa Digital yang Modern
             </h2>
 
             <p className="mt-6 text-lg leading-relaxed text-slate-600">

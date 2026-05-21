@@ -193,7 +193,7 @@ export default function LayananPage() {
 
     const receiptText = `
 NOTA PENGAJUAN LAYANAN DESA
-DESA MANTANPAWALIE
+DESA MATTANPA WALIE
 
 Nomor Pengajuan : ${receiptData.nomorPengajuan}
 Tanggal          : ${receiptData.tanggalPengajuan}
@@ -212,14 +212,14 @@ Hasil Layanan    : ${receiptData.hasilLayanan}
 
 CATATAN
 Nota ini merupakan bukti awal pengajuan layanan desa.
-Pemohon diharapkan datang ke Kantor Desa Mantanpawalie dengan membawa:
+Pemohon diharapkan datang ke Kantor Desa Mattanpa Walie dengan membawa:
 1. Nota pengajuan ini
 2. KTP asli/fotokopi
 3. Kartu Keluarga
 4. Dokumen pendukung sesuai jenis layanan
 
 Terima kasih.
-Pemerintah Desa Mantanpawalie
+Pemerintah Desa Mattanpa Walie
 `;
 
     const blob = new Blob([receiptText], {
@@ -536,7 +536,7 @@ Pemerintah Desa Mantanpawalie
 
               <div className="rounded-2xl border border-yellow-200 bg-yellow-50 p-4 text-sm leading-relaxed text-yellow-800">
                 Setelah nota dibuat, pemohon diharapkan datang ke Kantor Desa
-                Mantanpawalie dengan membawa nota dan dokumen pendukung.
+                Mattanpa Walie dengan membawa nota dan dokumen pendukung.
               </div>
 
               <div className="flex flex-col gap-3 pt-4 sm:flex-row sm:justify-end">
@@ -590,7 +590,7 @@ Pemerintah Desa Mantanpawalie
                 </h3>
 
                 <p className="mt-1 text-sm text-slate-600">
-                  Pemerintah Desa Mantanpawalie
+                  Pemerintah Desa Mattampa Walie
                 </p>
               </div>
 
@@ -642,7 +642,7 @@ Pemerintah Desa Mantanpawalie
               </div>
 
               <div className="mt-6 rounded-2xl border border-yellow-200 bg-yellow-50 p-4 text-sm leading-relaxed text-yellow-800">
-                Pemohon diharapkan datang ke Kantor Desa Mantanpawalie dengan
+                Pemohon diharapkan datang ke Kantor Desa Mattampa Walie dengan
                 membawa nota ini, KTP, Kartu Keluarga, dan dokumen pendukung
                 sesuai jenis layanan.
               </div>

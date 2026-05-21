@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { BadgeCheck, MapPin, Phone, Mail } from 'lucide-react'
 
-export default function Kepalah() {
+export default function KepalaDesa() {
   return (
     <section className="relative overflow-hidden bg-white py-24">
       {/* Soft Background */}
@@ -93,7 +93,7 @@ export default function Kepalah() {
               viewport={{ once: true }}
               className="text-4xl font-black text-slate-900 md:text-5xl"
             >
-              Kepalah desa
+              Kepala desa
             </motion.h2>
 
             <motion.p
@@ -120,7 +120,7 @@ export default function Kepalah() {
                     </p>
 
                     <h4 className="font-semibold text-slate-900">
-                      Desa mattampa walie, Kecamatan lamuru, Kabupaten BONE
+                      Desa Mattampa Walie, Kecamatan Lamuru, Kabupaten Bone
                     </h4>
                   </div>
                 </div>
@@ -136,7 +136,7 @@ export default function Kepalah() {
                     </p>
 
                     <h4 className="font-semibold text-slate-900">
-                      +62 812-3456-7890
+                      +62 853-4199-4292
                     </h4>
                   </div>
                 </div>
