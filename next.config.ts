@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "res.cloudinary.com",
-        pathname: "/nama-cloud-kamu/**",
+        hostname: "**.public.blob.vercel-storage.com",
+        pathname: "/**",
       },
     ],
   },
