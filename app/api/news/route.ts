@@ -1,4 +1,5 @@
 import { prisma } from "../../../src/lib/prisma";
+import { NextResponse } from "next/server";
 
 function createSlug(title: string) {
   return title
@@ -28,11 +29,11 @@ export async function GET() {
       },
     });
 
-    return Response.json(news);
+    return NextResponse.json(news);
   } catch (error) {
-    console.error(error);
+    console.error("NEWS_GET_ERROR:", error);
 
-    return Response.json(
+    return NextResponse.json(
       { error: "Gagal mengambil data berita." },
       { status: 500 }
     );
@@ -45,9 +46,26 @@ export async function POST(request: Request) {
 
     const { title, content, excerpt, imageUrl, category, authorId } = body;
 
-    if (!title || !content || !authorId) {
-      return Response.json(
-        { error: "Judul, isi berita, dan authorId wajib diisi." },
+    if (!title || !content) {
+      return NextResponse.json(
+        { error: "Judul dan isi berita wajib diisi." },
+        { status: 400 }
+      );
+    }
+
+    const numericAuthorId = Number(authorId || 1);
+
+    const author = await prisma.user.findUnique({
+      where: {
+        id: numericAuthorId,
+      },
+    });
+
+    if (!author) {
+      return NextResponse.json(
+        {
+          error: `Author dengan ID ${numericAuthorId} tidak ditemukan di database.`,
+        },
         { status: 400 }
       );
     }
@@ -64,19 +82,19 @@ export async function POST(request: Request) {
         imageUrl: imageUrl || null,
         category: category || "Berita",
         status: "published",
-        authorId: Number(authorId),
+        authorId: numericAuthorId,
       },
     });
 
-    return Response.json({
+    return NextResponse.json({
       message: "Berita berhasil dipublikasikan.",
       data: news,
     });
   } catch (error) {
-    console.error(error);
+    console.error("NEWS_CREATE_ERROR:", error);
 
-    return Response.json(
-      { error: "Gagal membuat berita." },
+    return NextResponse.json(
+      { error: "Gagal membuat berita. Cek log server untuk detail error." },
       { status: 500 }
     );
   }

@@ -5,6 +5,13 @@ export const runtime = "nodejs";
 
 export async function POST(request: Request) {
   try {
+    if (!process.env.BLOB_READ_WRITE_TOKEN_READ_WRITE_TOKEN_READ_WRITE_TOKEN) {
+      return NextResponse.json(
+        { error: "BLOB_READ_WRITE_TOKEN belum terbaca di server." },
+        { status: 500 }
+      );
+    }
+
     const formData = await request.formData();
     const file = formData.get("file") as File | null;
 
@@ -33,9 +40,12 @@ export async function POST(request: Request) {
       );
     }
 
-    const blob = await put(`berita/${file.name}`, file, {
+    const safeFileName = file.name.replace(/\s+/g, "-").toLowerCase();
+
+    const blob = await put(`berita/${Date.now()}-${safeFileName}`, file, {
       access: "public",
       addRandomSuffix: true,
+      token: process.env.BLOB_READ_WRITE_TOKEN_READ_WRITE_TOKEN_READ_WRITE_TOKEN,
     });
 
     return NextResponse.json({
